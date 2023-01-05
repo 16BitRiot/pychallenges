@@ -1,4 +1,25 @@
 def calculate(operation, a, b, make_int=False, message='The result is'):
+    if operation == 'add':
+        result = a + b
+        print(f"{message} {result}")
+        return f"{message} {result}"
+    if operation == 'subtract':
+        result = a - b
+        result2 = result
+        if make_int == True:
+            result2 = int(result)
+        print(f"{message} {result2}")
+        return f"{message} {result2}"
+    if operation == 'multiply':
+        result = a * b
+        print(f"{message} {result}")
+        return f"{message} {result}"
+    if operation == 'divide':
+        result = a / b
+        print(f"{message} {result}")
+        return f"{message} {result}"
+    else:
+        return None
     """Perform operation on a + b, ()possibly truncating) & returning w/msg.
 
     - operation: 'add', 'subtract', 'multiply', or 'divide'
@@ -26,3 +47,12 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+
+
+calculate('add', 2.5, 4)
+calculate('subtract', 4, 1.5, make_int=True)
+calculate('multiply', 1.5, 2)
+calculate('divide', 10, 4, message='I got')
+calculate('foo', 2, 3)
+
+# tested, works
