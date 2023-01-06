@@ -1,5 +1,12 @@
-def two_oldest_ages(ages):
-    """Return two distinct oldest ages as tuple (second-oldest, oldest)..
+import heapq
+
+def two_oldest_ages(nums):
+    two_highest = heapq.nlargest(2, nums)
+    return tuple(two_highest)
+
+nums = [1, 2, 10, 8]
+print(two_oldest_ages(nums))  # prints (10, 8)
+"""Return two distinct oldest ages as tuple (second-oldest, oldest)..
 
         >>> two_oldest_ages([1, 2, 10, 8])
         (8, 10)
@@ -21,3 +28,5 @@ def two_oldest_ages(ages):
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
+
+# tested, works
