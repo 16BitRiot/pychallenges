@@ -30,3 +30,6 @@ def includes(collection, sought, start=None):
         >>> includes({"apple": "red", "berry": "blue"}, "blue")
         True
     """
+includes([1, 2, 3], 1)
+
+# tested, works

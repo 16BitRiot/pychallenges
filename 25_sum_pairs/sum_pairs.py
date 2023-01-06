@@ -1,5 +1,16 @@
 def sum_pairs(nums, goal):
-    
+    nums_sum = ()
+    length = len(nums)
+    for i in range(length):
+        num = nums[i]
+        for j in range(i+1, length):
+            temp_sum = num + nums[j]
+            if temp_sum == goal:
+                return (num, nums[j])
+    return ()
+
+
+
     """Return tuple of first pair of nums that sum to goal.
 
     For example:
@@ -22,3 +33,8 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+
+sum_pairs([1, 2, 2, 10], 4)
+
+
+# tested, works
