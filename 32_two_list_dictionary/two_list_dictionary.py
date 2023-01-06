@@ -1,4 +1,12 @@
 def two_list_dictionary(keys, values):
+    limit = min(len(keys), len(values))
+    new_dict = {}
+    for i in range(limit):
+        key = keys[i]
+        value = values[i]
+        new_dict[key] = value
+    print(new_dict)
+
     """Given keys and values, make dictionary of those.
     
         >>> two_list_dictionary(['x', 'y', 'z'], [9, 8, 7])
@@ -15,3 +23,8 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+two_list_dictionary(['x', 'y', 'z'], [9, 8, 7])
+two_list_dictionary(['a', 'b', 'c', 'd'], [1, 2, 3])
+two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
+
+# tested, works
